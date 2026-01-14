@@ -1,4 +1,4 @@
-//VueJS - Desire Result
+//VueJS - Declarative Approach - Write your desired result
 Vue.createApp({
     //Data object property
     data() {
