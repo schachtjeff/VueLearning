@@ -1,4 +1,27 @@
-const buttonEl = document.querySelector('button');
+//VueJS - Desire Result
+Vue.createApp({
+    //Data object property
+    data() {
+        return {
+            // Array of goals and extracted input from user.
+            goals: [],
+            enteredValue: ''
+        };
+    },
+    methods: {
+        addGoal() {
+            // Adds the input to the array.
+            this.goals.push(this.enteredValue);
+            // Clears the text box after every submission.
+            this.enteredValue = '';
+        }
+    }
+// Need to mount to the div on the html
+}).mount('#app');
+
+
+// JavaScript Imperitive approach, step-by-step
+/* const buttonEl = document.querySelector('button');
 const inputEl = document.querySelector('input');
 const listEl = document.querySelector('ul');
 
@@ -15,4 +38,4 @@ function addGoal() {
     inputEl.value = '';
 }
 
-buttonEl.addEventListener('click', addGoal);
+buttonEl.addEventListener('click', addGoal); */
