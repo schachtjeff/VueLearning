@@ -9,4 +9,4 @@ Scripts with the following:
 	<script src="https://unpkg.com/vue@next"></script>
 
 need the change with the following:
-    <script src="https://unpkg.com/vue@3.4.9/dist/vue.global.js"></script> 
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script> 
