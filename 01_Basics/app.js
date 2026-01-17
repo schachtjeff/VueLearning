@@ -4,6 +4,8 @@ const app = Vue.createApp({
         return {
             courseGoalA: 'Finish the course and learn Vue!',
             courseGoalB: 'Master Vue and build amazing apps!',
+            //If your data comes in with html tags you can use the 'v-html' directive.
+            //courseGoalB: '<h2>Master Vue and build amazing apps!</h2>',
             vueLink: 'https://vuejs.org/'
         }; 
     },

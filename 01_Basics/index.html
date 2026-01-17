@@ -22,7 +22,10 @@
       <p>{{ courseGoalA }}</p>
       <!--v-bind directive sets an attribute to find and set the reference-->
       <p>Learn more <a v-bind:href="vueLink">about Vue.</a></p>
-      <!--Output the goal from methods-->
+      <!--Output the goal from methods, v-html directive used if html tags come in-->
+      <!--   But you can't use the curl braces but whatever is-->
+      <!--SECURITY ISSUE though with v-html that it opens holes with tags.-->
+      <!--<p v-html="outputGoal()"></p>-->
       <p>{{ outputGoal() }}</p>
       <!-- can do some adding-->
       <p>Adding 1 + 1 = {{ 1 + 1 }}</p>
