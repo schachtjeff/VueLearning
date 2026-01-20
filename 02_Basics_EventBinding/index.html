@@ -20,8 +20,9 @@
       <h2>Events in Action</h2>
       <!--event listener for a click of the buttons.-->
       <!-- Add/subtract to the counter. BUT! we don't any logic here.-->
-      <button v-on:click="incrementer()">Add</button>
-      <button v-on:click="decrementer()">Subtract</button>
+      <!-- Want to put the logic in the app.js and away from html.  Use method listeners.-->
+      <button v-on:click="incrementer(5)">Add 5</button>
+      <button v-on:click="decrementer(5)">Subtract 5</button>
       <p>Result: {{ counter }}</p>
     </section>
   </body>
