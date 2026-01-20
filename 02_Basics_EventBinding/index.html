@@ -24,6 +24,9 @@
       <button v-on:click="incrementer(5)">Add 5</button>
       <button v-on:click="decrementer(5)">Subtract 5</button>
       <p>Result: {{ counter }}</p>
+      <!-- v-on:input will listen for text input on the element-->
+      <input type="text" v-on:input="setName">
+      <p>Your Name: {{ name }}</p>
     </section>
   </body>
 </html>
