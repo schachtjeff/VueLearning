@@ -19,9 +19,9 @@
     <section id="events">
       <h2>Events in Action</h2>
       <!--event listener for a click of the buttons.-->
-      <!-- Add/subtract to the counter-->
-      <button v-on:click="counter++">Add</button>
-      <button v-on:click="counter--">Subtract</button>
+      <!-- Add/subtract to the counter. BUT! we don't any logic here.-->
+      <button v-on:click="incrementer()">Add</button>
+      <button v-on:click="decrementer()">Subtract</button>
       <p>Result: {{ counter }}</p>
     </section>
   </body>
