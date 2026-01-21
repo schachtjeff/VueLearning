@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vue Basics</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jost:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js" defer></script>
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <h1>Vue Events</h1>
+    </header>
+    <section id="events">
+      <h2>Events in Action</h2>
+      <!--event listener for a click of the buttons.-->
+      <!-- Add/subtract to the counter. BUT! we don't any logic here.-->
+      <!-- Want to put the logic in the app.js and away from html.  Use method listeners.-->
+      <button v-on:click="incrementer(5)">Add 5</button>
+      <button v-on:click="decrementer(5)">Subtract 5</button>
+      <!-- preserve the initial state with v-once-->
+      <p v-once>Starting Counter: {{ counter }}</p>
+      <p>Result: {{ counter }}</p>
+      <!-- v-on:input will listen for text input on the element-->
+       <!-- keyup.enter listens when a special key goes from down to up.-->
+      <input type="text" v-on:input="setName" v-on:keyup.enter="confirmInput">
+      <p>Your Name: {{ confirmedName }}</p>
+      <!-- forms will refresh the page after sending data.  Things can be resized/changed/data loss-->
+      <!--2 solutions: 1 -  call method using v-on:submit; and -->
+      <!-- 2 - Add a modifier with a '.' like after submit.prevent-->
+      <!--<form v-on:submit="submitForm"> -->
+      <form v-on:submit.prevent="submitForm">
+        <input type="text">
+        <button>Sign Up</button>
+      </form>
+    </section>
+  </body>
+</html>
