@@ -23,6 +23,8 @@
       <!-- Want to put the logic in the app.js and away from html.  Use method listeners.-->
       <button v-on:click="incrementer(5)">Add 5</button>
       <button v-on:click="decrementer(5)">Subtract 5</button>
+      <!-- preserve the initial state with v-once-->
+      <p v-once>Starting Counter: {{ counter }}</p>
       <p>Result: {{ counter }}</p>
       <!-- v-on:input will listen for text input on the element-->
        <!-- keyup.enter listens when a special key goes from down to up.-->
