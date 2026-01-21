@@ -25,8 +25,17 @@
       <button v-on:click="decrementer(5)">Subtract 5</button>
       <p>Result: {{ counter }}</p>
       <!-- v-on:input will listen for text input on the element-->
-      <input type="text" v-on:input="setName">
-      <p>Your Name: {{ name }}</p>
+       <!-- keyup.enter listens when a special key goes from down to up.-->
+      <input type="text" v-on:input="setName" v-on:keyup.enter="confirmInput">
+      <p>Your Name: {{ confirmedName }}</p>
+      <!-- forms will refresh the page after sending data.  Things can be resized/changed/data loss-->
+      <!--2 solutions: 1 -  call method using v-on:submit; and -->
+      <!-- 2 - Add a modifier with a '.' like after submit.prevent-->
+      <!--<form v-on:submit="submitForm"> -->
+      <form v-on:submit.prevent="submitForm">
+        <input type="text">
+        <button>Sign Up</button>
+      </form>
     </section>
   </body>
 </html>

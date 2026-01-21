@@ -2,7 +2,8 @@ const app = Vue.createApp({
   data() {
     return {
       counter: 0,
-      name: ''
+      name: '',
+      confirmedName: ''
     };
   },
   methods: {
@@ -18,7 +19,16 @@ const app = Vue.createApp({
     },
     setName(item) {
       this.name = item.target.value;
-    }
+    },
+    //For the obvious form submission
+    submitForm() {
+      //Tells the page not to refresh after submission with the default on
+      //event.preventDefault();
+      alert('Form Submitted!');
+    },
+    confirmInput() {
+      this.confirmedName = this.name;
+    },
   }
 });
 
