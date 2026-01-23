@@ -5,6 +5,16 @@ const app = Vue.createApp({
       name: ''
     };
   },
+  computed: {
+    //it's a method property, but used like a data property.  Naming is same as data property.
+    fullname() {
+      console.log('Running again...');
+      if (this.name === '') {
+        return '';
+      }
+      return this.name + ' ' + 'Schwarzmuller';
+    }
+  },
   methods: {
     setName(event, lastName) {
       this.name = event.target.value;
