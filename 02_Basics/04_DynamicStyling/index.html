@@ -22,9 +22,14 @@
         v-bind:class="boxASelected ? 'demo active' : 'demo'" 
         @click="boxSelected('A')"
       ></div> -->
-      <div 
+      <!-- <div 
         class="demo"
         v-bind:class="{active: boxASelected}" 
+        @click="boxSelected('A')"
+      ></div> -->
+      <div 
+        class="demo"
+        v-bind:class="boxAClasses" 
         @click="boxSelected('A')"
       ></div>
       <div 
